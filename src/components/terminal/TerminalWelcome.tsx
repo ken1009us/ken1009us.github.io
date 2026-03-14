@@ -1,12 +1,12 @@
 import type { PortfolioData } from './types';
 import { helpCommand } from './commands/help';
 
-const ASCII_ART = `
- _  __                 __          __
-| |/ /    ___  _ __   \\ \\       / /  _   _
-| ' /    / _ \\| '_\\  \\ \\ /\\ / /  | | | |
-| . \\  |  __/| | | |   \\ V  V / /   | |_| |
-|_|\\_\\\\___||_| |_|    \\_/\\_/     \\__,_|
+const ASCII_ART = String.raw`
+ _  __              __        __
+| |/ /  ___  _ __   \ \      / /  _   _
+| ' /  / _ \| '_ \   \ \ /\ / /  | | | |
+| . \ |  __/| | | |   \ V  V /   | |_| |
+|_|\_\ \___||_| |_|    \_/\_/     \__,_|
 `;
 
 export function renderWelcome(data: PortfolioData) {
