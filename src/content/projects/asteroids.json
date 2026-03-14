@@ -1,0 +1,10 @@
+{
+  "name": "asteroid",
+  "displayName": "Asteroids Game",
+  "category": "game",
+  "description": "Classic asteroids arcade game",
+  "tech": ["Python", "Pygame"],
+  "github": "https://github.com/ken1009us/asteroid",
+  "liveUrl": null,
+  "order": 6
+}

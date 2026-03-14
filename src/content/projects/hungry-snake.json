@@ -1,0 +1,10 @@
+{
+  "name": "hungry-snake",
+  "displayName": "Hungry Snake",
+  "category": "game",
+  "description": "Classic snake arcade game",
+  "tech": ["Python", "Pygame"],
+  "github": "https://github.com/ken1009us/hungry-snake",
+  "liveUrl": null,
+  "order": 8
+}

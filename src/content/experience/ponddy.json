@@ -1,0 +1,18 @@
+{
+  "company": "Ponddy Education Inc.",
+  "role": "Software Engineer",
+  "startDate": "2020",
+  "endDate": "2021",
+  "location": "Taipei, Taiwan",
+  "type": "On-site",
+  "order": 3,
+  "categories": {
+    "Engineering": [
+      "Created a Python-based web scraping tool that autonomously aggregated data from more than 10,000 articles, reducing data aggregation time by approximately 90%",
+      "Employed AWS EC2 instances to run and manage the data pipeline, ensuring high availability and performance",
+      "Migrated database code from PostgreSQL to Django's ORM, optimizing data handling and framework efficiency",
+      "Scheduled and managed tasks with Apache Airflow, ensuring regular, automated data pipeline collection with robust monitoring",
+      "Utilized AWS S3 for efficient and structured data storage, ensuring easy access and management of collected data"
+    ]
+  }
+}

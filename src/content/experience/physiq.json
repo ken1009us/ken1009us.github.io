@@ -1,0 +1,19 @@
+{
+  "company": "PhysIQ",
+  "role": "Software Engineer",
+  "startDate": "2022",
+  "endDate": "2023",
+  "location": "Chicago, Illinois",
+  "type": "On-site",
+  "order": 2,
+  "categories": {
+    "Engineering": [
+      "Designed and implemented Slack bot using Node.js, reducing onboarding time for new hires by 33%, saving approximately 4 hours per new hire",
+      "Developed web-based capacity calculator using Python Flask, enabling staff to accurately estimate available working hours, resulting in a 20% improvement in resource allocation",
+      "Led the migration of the algorithm pipeline to support real-time health monitoring by making key health data attributes listenable",
+      "Refined project build automation and facilitated cross-platform development by integrating the Python Nox library",
+      "Resolved Kotlin and MySQL RESTful API backend data retrieval issues by debugging on Linux, updating MySQL queries, and refining Kotlin validation methods",
+      "Utilized fixturesets in MySQL to generate test data, validating the new pipeline's output for accuracy and reliability"
+    ]
+  }
+}

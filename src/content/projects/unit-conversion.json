@@ -1,0 +1,10 @@
+{
+  "name": "unit-conversion",
+  "displayName": "Units Conversion Service",
+  "category": "proj",
+  "description": "Units conversion service application",
+  "tech": ["Python"],
+  "github": "https://github.com/ken1009us/unit-conversion",
+  "liveUrl": null,
+  "order": 5
+}

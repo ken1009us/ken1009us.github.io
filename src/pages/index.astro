@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Terminal from '../components/terminal/Terminal';
+import '../styles/terminal.css';
+import { getCollection, getEntry } from 'astro:content';
+
+const profileEntry = await getEntry('profile', 'ken');
+const experienceEntries = await getCollection('experience');
+const projectEntries = await getCollection('projects');
+const skillsEntry = await getEntry('skills', 'skills');
+const recommendationEntries = await getCollection('recommendations');
+
+const data = {
+  profile: profileEntry.data,
+  experience: experienceEntries.map(e => e.data).sort((a, b) => a.order - b.order),
+  projects: projectEntries.map(e => e.data).sort((a, b) => a.order - b.order),
+  skills: skillsEntry.data,
+  recommendations: recommendationEntries.map(e => e.data).sort((a, b) => a.order - b.order),
+};
+
+const title = "Ken Wu | Software Engineer";
+const description = "Interactive terminal portfolio of Shu-Hao (Ken) Wu — Software Engineer & SRE based in Tokyo, Japan.";
+---
+
+<Layout title={title} description={description}>
+  <main>
+    <Terminal client:load data={data} />
+  </main>
+
+  <!-- SEO: Hidden semantic content for crawlers -->
+  <noscript>
+    <div class="seo-only">
+      <h1>{data.profile.name}</h1>
+      <h2>{data.profile.title}</h2>
+      <p>{data.profile.summary}</p>
+
+      <h2>Work Experience</h2>
+      {data.experience.map(exp => (
+        <section>
+          <h3>{exp.role} at {exp.company}</h3>
+          <p>{exp.startDate} - {exp.endDate} | {exp.location}</p>
+          {Object.entries(exp.categories).map(([cat, items]) => (
+            <div>
+              <h4>{cat}</h4>
+              <ul>
+                {items.map(item => <li>{item}</li>)}
+              </ul>
+            </div>
+          ))}
+        </section>
+      ))}
+
+      <h2>Projects</h2>
+      {data.projects.map(p => (
+        <section>
+          <h3>{p.displayName}</h3>
+          <p>{p.description}</p>
+          <p>Tech: {p.tech.join(', ')}</p>
+          {p.github && <a href={p.github}>GitHub</a>}
+        </section>
+      ))}
+
+      <h2>Skills</h2>
+      {Object.entries(data.skills.categories).map(([cat, skills]) => (
+        <div>
+          <h3>{cat}</h3>
+          <ul>
+            {skills.map(s => <li>{s.name}: {s.level}%</li>)}
+          </ul>
+        </div>
+      ))}
+
+      <h2>Education</h2>
+      <p>Master of Science in Information Science, {data.profile.university}</p>
+
+      <h2>Contact</h2>
+      <p>Email: {data.profile.email}</p>
+      <a href={data.profile.social.github}>GitHub</a>
+      <a href={data.profile.social.linkedin}>LinkedIn</a>
+    </div>
+  </noscript>
+</Layout>

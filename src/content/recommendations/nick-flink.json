@@ -1,0 +1,6 @@
+{
+  "author": "Nick Flink",
+  "title": "Director of Cloud Engineering, PhysIQ",
+  "text": "Ken would be an asset to any company that values intelligent elegant solutions and the persistence that is required to achieve them. I was always impressed with his curiosity and ability to simplify complicated specs into well documented, tested and easy to read code. He had a immediate impact overhauling our python build tooling to use modern best practices leveraging nox and Gitlab CI. He then moved on to add new functionality to one of our internal projects that gave it access to measurements that weren't available previously. This opened the door to some game changing new analytics that were not possible prior. Finally I was most impressed with Ken's ability to identify and fix an error in our graph validation that prevents cycles. It really demonstrated his ability to drill down into something quite complicated and come away with the understanding to fix it. It would be a privilege to work with Ken again in the future.",
+  "order": 0
+}

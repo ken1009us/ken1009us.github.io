@@ -1,0 +1,19 @@
+{
+  "company": "Allstate Insurance Company",
+  "role": "Data Engineer",
+  "startDate": "2023",
+  "endDate": "2024",
+  "location": "USA",
+  "type": "Remote",
+  "order": 1,
+  "categories": {
+    "Data Engineering": [
+      "Architected comprehensive data pipeline using Azure Data Factory, reducing data processing time by 50%",
+      "Created transformation pipeline in Azure Data Factory to convert raw data into Parquet format, enhancing data query performance by 30%",
+      "Configured Azure Blob Storage to systematically store raw, processed, and transformed data, providing a clear and organized data management system",
+      "Designed star schema for data storage, optimizing query performance and reducing execution time",
+      "Developed ETL pipeline using Python to load CSV and raw data into PostgreSQL",
+      "Established storage layers for landing, bronze, quarantine, and silver data, improving data organization and quality control"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "receipt-processor-service",
+  "displayName": "Receipt Processor Service",
+  "category": "proj",
+  "description": "Receipt processor service application",
+  "tech": ["Go"],
+  "github": "https://github.com/ken1009us/receipt-processor-service",
+  "liveUrl": null,
+  "order": 1
+}

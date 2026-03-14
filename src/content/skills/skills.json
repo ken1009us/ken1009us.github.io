@@ -1,0 +1,27 @@
+{
+  "categories": {
+    "Languages": [
+      { "name": "Python", "level": 100 },
+      { "name": "JavaScript", "level": 80 },
+      { "name": "Java", "level": 88 },
+      { "name": "SQL", "level": 95 },
+      { "name": "HTML/CSS", "level": 90 },
+      { "name": "Terraform", "level": 95 }
+    ],
+    "Cloud & Infrastructure": [
+      { "name": "AWS (EC2, S3, Lambda)", "level": 90 },
+      { "name": "GCP", "level": 80 },
+      { "name": "Azure (ADF, Blob)", "level": 75 },
+      { "name": "Kubernetes", "level": 80 },
+      { "name": "Docker", "level": 85 }
+    ],
+    "Frameworks & Tools": [
+      { "name": "Node.js", "level": 85 },
+      { "name": "Flask / Django", "level": 85 },
+      { "name": "MySQL / PostgreSQL", "level": 90 },
+      { "name": "Redis", "level": 80 },
+      { "name": "Apache Airflow", "level": 75 },
+      { "name": "Git / CI-CD", "level": 90 }
+    ]
+  }
+}

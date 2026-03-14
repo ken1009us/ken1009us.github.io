@@ -1,0 +1,29 @@
+{
+  "company": "THECOO Inc.",
+  "role": "Site Reliability Engineer",
+  "startDate": "2024",
+  "endDate": "Present",
+  "location": "Japan",
+  "type": "Hybrid",
+  "order": 0,
+  "categories": {
+    "Infrastructure/Site Reliability": [
+      "Fixed resource inconsistencies in AWS Lambda by verifying dependencies with services like EventBridge, ensuring all related resources were properly imported into Terraform",
+      "Improved infrastructure reliability by enforcing Infrastructure-as-Code best practices, reducing manual interventions and ensuring a fully Terraform-managed cloud environment",
+      "Isolated production and non-production env in GCP by refactoring Node.js backend and Terraform code, improving data access control, deployment safety, and debugging efficiency",
+      "Refactored Kubernetes environment from MVP by restructuring configurations and optimizing resource allocation, improving deployment stability and reducing setup time"
+    ],
+    "Backend Engineering": [
+      "Added indexes to the point payout logs table based on different transaction types, improving query efficiency",
+      "Designed Redis session store in Node.js to support user-ID based session deletion, enabling force logout across devices",
+      "Integrated force-logout mechanism into key API routes for session invalidation on account deletion/password reset",
+      "Migrated MySQL schema with a new operation fee table and foreign keys to existing tables (lottery, etc.)",
+      "Wrote Jest integration tests covering session creation, retrieval, deletion, and force-logout flows"
+    ],
+    "Other Contributions": [
+      "Developed a Slack bot in Node.js to fetch and display HR documents in seconds instead of minutes",
+      "Implemented Slack API calls for channel message search based on user queries",
+      "Used Google Drive API to list/filter documents and return filename+link in Slack"
+    ]
+  }
+}

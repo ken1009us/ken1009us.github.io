@@ -1,0 +1,10 @@
+{
+  "name": "newsflow",
+  "displayName": "NewsFlow",
+  "category": "tool",
+  "description": "Trending news dashboard with keyword search",
+  "tech": ["Python", "Dash"],
+  "github": null,
+  "liveUrl": "http://www.newsflow-app.com/",
+  "order": 4
+}

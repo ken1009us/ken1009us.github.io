@@ -1,0 +1,10 @@
+{
+  "name": "pycleancodecli",
+  "displayName": "Python Comment-out Code Cleaner CLI",
+  "category": "tool",
+  "description": "CLI tool to clean commented-out code from Python files",
+  "tech": ["Python"],
+  "github": "https://github.com/ken1009us/pycleancodecli",
+  "liveUrl": null,
+  "order": 10
+}
