@@ -1,0 +1,6 @@
+{
+  "author": "ChungYu Yang",
+  "title": "Engineer Manager at THECOO Inc.",
+  "text": "I am pleased to recommend Ken Wu, who worked under my supervision as a Software Engineer. On the backend side, Ken designed and implemented a new operation fee system for point-based scratch games. He also migrated the MySQL schema by introducing a dedicated operation fee table and adding foreign keys to existing lottery-related tables, ensuring structured and maintainable fee management. In addition, Ken improved system reliability by enforcing Infrastructure-as-Code practices with Terraform, refactoring GCP environments to isolate production and non-production systems, and stabilizing our Kubernetes setup. Ken is a dependable engineer with strong technical judgment, and I confidently recommend him for backend SRE, or software engineering roles.",
+  "order": 1
+}
