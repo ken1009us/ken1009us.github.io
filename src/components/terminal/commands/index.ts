@@ -1,4 +1,4 @@
-import type { CommandHandler, PortfolioData } from '../types';
+import type { CommandHandler } from '../types';
 import { helpCommand } from './help';
 import { aboutCommand } from './about';
 import { skillsCommand } from './skills';
@@ -12,6 +12,7 @@ import { askCommand } from './ask';
 import { clearCommand } from './clear';
 import { themeCommand } from './theme';
 import { createHistoryCommand } from './history';
+import { langCommand } from './lang';
 
 export function createCommandRegistry(getHistory: () => string[]): CommandHandler[] {
   return [
@@ -28,6 +29,7 @@ export function createCommandRegistry(getHistory: () => string[]): CommandHandle
     clearCommand,
     themeCommand,
     createHistoryCommand(getHistory),
+    langCommand,
   ];
 }
 

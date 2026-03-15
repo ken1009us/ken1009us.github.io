@@ -1,8 +1,18 @@
 import type { ReactNode } from 'react';
+import type { TFunction, Lang } from '../../i18n';
 
 export interface CommandResult {
   output: ReactNode;
   isError?: boolean;
+}
+
+export type SetLangFn = (lang: Lang) => void;
+
+export interface CommandContext {
+  data: PortfolioData;
+  t: TFunction;
+  lang: Lang;
+  setLang: SetLangFn;
 }
 
 export interface CommandHandler {
@@ -10,7 +20,7 @@ export interface CommandHandler {
   aliases: string[];
   description: string;
   usage?: string;
-  execute: (args: string[], data: PortfolioData) => CommandResult;
+  execute: (args: string[], ctx: CommandContext) => CommandResult;
 }
 
 export interface HistoryEntry {

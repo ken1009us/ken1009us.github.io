@@ -1,10 +1,10 @@
 import { useCallback, useMemo } from 'react';
-import type { CommandHandler, CommandResult, PortfolioData } from './types';
+import type { CommandResult, CommandContext } from './types';
 import { createCommandRegistry, findCommand, getAllCommandNames } from './commands';
 import { findClosestCommand } from './utils/levenshtein';
 import { getCompletions, longestCommonPrefix } from './utils/autocomplete';
 
-export function useCommandParser(data: PortfolioData, getHistory: () => string[]) {
+export function useCommandParser(ctx: CommandContext, getHistory: () => string[]) {
   const commands = useMemo(() => createCommandRegistry(getHistory), [getHistory]);
   const allNames = useMemo(() => getAllCommandNames(commands), [commands]);
   const primaryNames = useMemo(() => commands.map(c => c.name), [commands]);
@@ -25,7 +25,7 @@ export function useCommandParser(data: PortfolioData, getHistory: () => string[]
       if (handler.name === 'clear') {
         return { output: null, isClear: true };
       }
-      return handler.execute(args, data);
+      return handler.execute(args, ctx);
     }
 
     // Typo correction
@@ -34,9 +34,9 @@ export function useCommandParser(data: PortfolioData, getHistory: () => string[]
       return {
         output: (
           <>
-            <span className="cmd-error">Command not found: {cmdName}</span>
+            <span className="cmd-error">{ctx.t('errors.notFound', { cmd: cmdName })}</span>
             {'\n'}
-            <span className="cmd-suggestion">Did you mean: <strong>{suggestion}</strong>?</span>
+            <span className="cmd-suggestion">{ctx.t('errors.didYouMean')}<strong>{suggestion}</strong>?</span>
           </>
         ),
         isError: true,
@@ -46,14 +46,14 @@ export function useCommandParser(data: PortfolioData, getHistory: () => string[]
     return {
       output: (
         <>
-          <span className="cmd-error">Command not found: {cmdName}</span>
+          <span className="cmd-error">{ctx.t('errors.notFound', { cmd: cmdName })}</span>
           {'\n'}
-          <span className="cmd-muted">Type <strong>help</strong> to see available commands.</span>
+          <span className="cmd-muted">{ctx.t('errors.helpHint')}<strong>help</strong>{ctx.t('errors.helpHintSuffix')}</span>
         </>
       ),
       isError: true,
     };
-  }, [commands, data, primaryNames]);
+  }, [commands, ctx, primaryNames]);
 
   const autocomplete = useCallback((input: string): { completed: string; options: string[] } => {
     const completions = getCompletions(input, allNames);

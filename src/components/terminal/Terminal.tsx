@@ -18,6 +18,7 @@ export default function Terminal({ data }: TerminalProps) {
     handleTab,
     handleClear,
     welcomeNode,
+    t,
   } = useTerminal(data);
 
   const bodyRef = useRef<HTMLDivElement>(null);
@@ -60,6 +61,7 @@ export default function Terminal({ data }: TerminalProps) {
           onHistoryNav={handleHistoryNav}
           onTab={handleTab}
           onClear={handleClear}
+          placeholder={t('input.placeholder')}
         />
       </div>
     </div>

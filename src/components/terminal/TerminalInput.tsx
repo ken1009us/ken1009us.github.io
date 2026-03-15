@@ -8,6 +8,7 @@ interface TerminalInputProps {
   onHistoryNav: (direction: 'up' | 'down') => void;
   onTab: () => void;
   onClear: () => void;
+  placeholder?: string;
 }
 
 export function TerminalInput({
@@ -17,6 +18,7 @@ export function TerminalInput({
   onHistoryNav,
   onTab,
   onClear,
+  placeholder = 'Type a command...',
 }: TerminalInputProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -63,7 +65,7 @@ export function TerminalInput({
           autoComplete="off"
           autoCorrect="off"
           spellCheck={false}
-          placeholder="Type a command..."
+          placeholder={placeholder}
         />
       </div>
     </div>

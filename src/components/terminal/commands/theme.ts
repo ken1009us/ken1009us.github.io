@@ -4,7 +4,7 @@ export const themeCommand: CommandHandler = {
   name: 'theme',
   aliases: [],
   description: 'Toggle dark/light mode',
-  execute: () => {
+  execute: (_args, { t }) => {
     const html = document.documentElement;
     const current = html.getAttribute('data-theme');
     const next = current === 'light' ? 'dark' : 'light';
@@ -12,7 +12,7 @@ export const themeCommand: CommandHandler = {
     localStorage.setItem('theme', next);
 
     return {
-      output: `Theme switched to ${next} mode.`,
+      output: t('theme.switched', { mode: next }),
     };
   },
 };

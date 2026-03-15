@@ -1,7 +1,8 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import type { ReactNode } from 'react';
-import type { PortfolioData, HistoryEntry } from './types';
+import type { PortfolioData, HistoryEntry, CommandContext } from './types';
 import { useCommandParser } from './useCommandParser';
+import { useTranslation } from './i18n/useTranslation';
 import { renderWelcome } from './TerminalWelcome';
 
 export function useTerminal(data: PortfolioData) {
@@ -11,8 +12,15 @@ export function useTerminal(data: PortfolioData) {
   const [input, setInput] = useState('');
   const [showWelcome, setShowWelcome] = useState(true);
 
+  const { t, lang, setLang } = useTranslation();
+
+  const ctx: CommandContext = useMemo(
+    () => ({ data, t, lang, setLang }),
+    [data, t, lang, setLang],
+  );
+
   const getHistory = useCallback(() => commandHistory, [commandHistory]);
-  const { parse, autocomplete } = useCommandParser(data, getHistory);
+  const { parse, autocomplete } = useCommandParser(ctx, getHistory);
 
   const executeCommand = useCallback((rawInput: string) => {
     const trimmed = rawInput.trim();
@@ -86,7 +94,7 @@ export function useTerminal(data: PortfolioData) {
     setShowWelcome(false);
   }, []);
 
-  const welcomeNode: ReactNode = showWelcome ? renderWelcome(data) : null;
+  const welcomeNode: ReactNode = showWelcome ? renderWelcome(data, t) : null;
 
   return {
     entries,
@@ -97,5 +105,6 @@ export function useTerminal(data: PortfolioData) {
     handleTab,
     handleClear,
     welcomeNode,
+    t,
   };
 }

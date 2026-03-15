@@ -1,4 +1,5 @@
 import type { PortfolioData } from './types';
+import type { TFunction } from '../../i18n';
 import { helpCommand } from './commands/help';
 
 const ASCII_ART = String.raw`
@@ -9,16 +10,27 @@ const ASCII_ART = String.raw`
 |_|\_\ \___||_| |_|    \_/\_/     \__,_|
 `;
 
-export function renderWelcome(data: PortfolioData) {
-  const helpResult = helpCommand.execute([], data);
+export function renderWelcome(data: PortfolioData, t: TFunction) {
+  // Create a minimal context for help command
+  const helpCtx = { data, t, lang: 'en' as const, setLang: () => {} };
+  const helpResult = helpCommand.execute([], helpCtx);
   return (
     <div className="cmd-output">
       <div className="ascii-art">{ASCII_ART}</div>
       <div className="welcome-info">
-        Welcome to {data.profile.name}'s interactive terminal portfolio.
+        {t('welcome.greeting', { name: data.profile.name })}
       </div>
       <div className="welcome-tip">
-        Type a command below or just run <span className="cmd-accent">help</span> to get started.
+        {t('welcome.tip').split('<accent>').map((part, i) => {
+          if (i === 0) return part;
+          const [accent, rest] = part.split('</accent>');
+          return (
+            <span key={i}>
+              <span className="cmd-accent">{accent}</span>
+              {rest}
+            </span>
+          );
+        })}
       </div>
       <div style={{ marginTop: 8 }}>
         {helpResult.output}
