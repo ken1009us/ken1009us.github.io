@@ -473,6 +473,7 @@ html, body {
   .terminal-window {
     margin: 0;
     height: 100vh;
+    height: 100dvh;
     max-width: 100%;
     border-radius: 0;
     box-shadow: none;
@@ -482,8 +483,17 @@ html, body {
     border-radius: 0;
   }
 
+  .terminal-titlebar-btn {
+    width: 12px;
+    height: 12px;
+  }
+
+  .terminal-titlebar-title {
+    font-size: 12px;
+  }
+
   .terminal-body {
-    padding: 12px;
+    padding: 10px;
     font-size: 13px;
   }
 
@@ -491,13 +501,96 @@ html, body {
     font-size: 16px; /* Prevents iOS zoom on focus */
   }
 
+  /* Shorten prompt on mobile */
+  .prompt-host {
+    display: none;
+  }
+
+  .prompt-at {
+    display: none;
+  }
+
+  .prompt-sep {
+    display: none;
+  }
+
+  /* ASCII art */
+  .ascii-art {
+    font-size: 7px;
+    overflow: hidden;
+  }
+
+  /* Skill bars — stack vertically */
+  .skill-bar {
+    flex-wrap: wrap;
+    gap: 2px 8px;
+  }
+
   .skill-name {
-    min-width: 140px;
+    min-width: unset;
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .skill-pct {
+    min-width: unset;
+  }
+
+  /* Help grid */
+  .help-grid {
+    gap: 2px 12px;
+  }
+
+  /* Experience cards */
+  .exp-card {
+    padding-left: 8px;
+  }
+
+  .exp-meta {
+    font-size: 12px;
+  }
+
+  .exp-item {
+    padding-left: 4px;
+  }
+
+  /* Project cards */
+  .proj-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Recommendations */
+  .rec-card {
+    padding-left: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+  .terminal-body {
+    padding: 8px;
     font-size: 12px;
   }
 
   .ascii-art {
-    font-size: 8px;
+    font-size: 5.5px;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .help-desc {
+    margin-bottom: 4px;
+    padding-left: 12px;
+  }
+
+  .exp-meta {
+    font-size: 11px;
   }
 }
 
