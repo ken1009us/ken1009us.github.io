@@ -1,0 +1,10 @@
+{
+  "name": "ledger-flux",
+  "displayName": "Ledger Flux",
+  "category": "proj",
+  "description": "Privacy-first offline personal finance PWA with expense tracking, investment portfolio monitoring, and multi-currency support",
+  "tech": ["TypeScript", "Next.js", "React", "Tailwind CSS", "IndexedDB", "PWA"],
+  "github": null,
+  "liveUrl": "https://money-beryl-five.vercel.app/expense",
+  "order": 0
+}
