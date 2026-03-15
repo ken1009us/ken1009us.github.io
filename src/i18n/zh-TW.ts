@@ -88,8 +88,19 @@ export const zhTW: TranslationsPartial = {
       'Backend Engineering': '後端工程',
       'Other Contributions': '其他貢獻',
       Engineering: '工程',
+      'Frontend Engineering': '前端工程',
     },
     bullets: {
+      'treasure-data': {
+        'Backend Engineering': [
+          '建立即將過期 API 金鑰的自動電子郵件提醒工作流程，協助客戶避免意外的 API 中斷',
+          '設計並實作 MySQL 資料庫 schema 變更及後端邏輯，支援可配置的 API 金鑰過期與提醒策略',
+          '透過更新認證流程和 Rails 後端端點，主導 API 金鑰過期與提醒機制的實作，防止 API 金鑰無限期使用',
+        ],
+        'Frontend Engineering': [
+          '以 React 開發 API 金鑰管理介面，具備可配置的過期設定和通知橫幅，提升 API 金鑰即將過期的可見性',
+        ],
+      },
       allstate: {
         'Data Engineering': [
           '使用 Azure Data Factory 設計完整資料管線，將資料處理時間縮短 50%',

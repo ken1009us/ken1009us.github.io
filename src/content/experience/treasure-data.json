@@ -6,5 +6,14 @@
   "location": "Tokyo, Japan",
   "type": "Hybrid",
   "order": 4,
-  "categories": {}
+  "categories": {
+    "Backend Engineering": [
+      "Built automated email reminder workflows for expiring API keys, helping customers avoid unexpected API disruptions",
+      "Designed and implemented MySQL database schema changes and backend logic for configurable API key expiration and reminder policies",
+      "Led the implementation of API key expiration and reminder mechanisms by updating authentication flows and Rails backend endpoints, preventing indefinite API key usage"
+    ],
+    "Frontend Engineering": [
+      "Developed an API key management interface in React with configurable expiration settings and notification banners, improving visibility of upcoming API key expirations"
+    ]
+  }
 }

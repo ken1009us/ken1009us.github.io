@@ -88,8 +88,19 @@ export const ja: TranslationsPartial = {
       'Backend Engineering': 'バックエンドエンジニアリング',
       'Other Contributions': 'その他の貢献',
       Engineering: 'エンジニアリング',
+      'Frontend Engineering': 'フロントエンドエンジニアリング',
     },
     bullets: {
+      'treasure-data': {
+        'Backend Engineering': [
+          '有効期限が近づくAPIキーに対する自動メールリマインダーワークフローを構築し、顧客の予期しないAPI障害を防止',
+          'MySQLデータベーススキーマの変更と、APIキーの有効期限およびリマインダーポリシーを設定可能にするバックエンドロジックを設計・実装',
+          '認証フローとRailsバックエンドエンドポイントを更新してAPIキーの有効期限とリマインダー機構の実装をリードし、APIキーの無期限使用を防止',
+        ],
+        'Frontend Engineering': [
+          '有効期限設定と通知バナーを備えたAPIキー管理インターフェースをReactで開発し、APIキーの有効期限切れの可視性を向上',
+        ],
+      },
       allstate: {
         'Data Engineering': [
           'Azure Data Factoryを使った包括的データパイプラインを設計し、データ処理時間を50%削減',

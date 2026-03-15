@@ -88,6 +88,7 @@ export const en: Translations = {
       'Backend Engineering': 'Backend Engineering',
       'Other Contributions': 'Other Contributions',
       Engineering: 'Engineering',
+      'Frontend Engineering': 'Frontend Engineering',
     },
     bullets: {},
   },
