@@ -6,6 +6,7 @@
       { "name": "Java", "level": 88 },
       { "name": "SQL", "level": 95 },
       { "name": "HTML/CSS", "level": 90 },
+      { "name": "Ruby", "level": 80 },
       { "name": "Terraform", "level": 95 }
     ],
     "Cloud & Infrastructure": [
