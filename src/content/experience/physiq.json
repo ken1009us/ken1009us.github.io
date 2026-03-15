@@ -5,7 +5,7 @@
   "endDate": "2023",
   "location": "Chicago, Illinois",
   "type": "On-site",
-  "order": 3,
+  "order": 1,
   "categories": {
     "Engineering": [
       "Designed and implemented Slack bot using Node.js, reducing onboarding time for new hires by 33%, saving approximately 4 hours per new hire",

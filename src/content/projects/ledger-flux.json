@@ -6,5 +6,5 @@
   "tech": ["TypeScript", "Next.js", "React", "Tailwind CSS", "IndexedDB", "PWA"],
   "github": null,
   "liveUrl": "https://money-beryl-five.vercel.app/expense",
-  "order": 0
+  "order": 11
 }
