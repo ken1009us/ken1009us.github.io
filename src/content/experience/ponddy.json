@@ -5,7 +5,7 @@
   "endDate": "2021",
   "location": "Taipei, Taiwan",
   "type": "On-site",
-  "order": 3,
+  "order": 4,
   "categories": {
     "Engineering": [
       "Created a Python-based web scraping tool that autonomously aggregated data from more than 10,000 articles, reducing data aggregation time by approximately 90%",

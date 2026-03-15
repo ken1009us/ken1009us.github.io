@@ -2,10 +2,10 @@
   "company": "THECOO Inc.",
   "role": "Site Reliability Engineer",
   "startDate": "2024",
-  "endDate": "Present",
+  "endDate": "2025",
   "location": "Japan",
   "type": "Hybrid",
-  "order": 0,
+  "order": 1,
   "categories": {
     "Infrastructure/Site Reliability": [
       "Fixed resource inconsistencies in AWS Lambda by verifying dependencies with services like EventBridge, ensuring all related resources were properly imported into Terraform",
