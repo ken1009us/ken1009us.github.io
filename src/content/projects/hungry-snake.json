@@ -2,8 +2,8 @@
   "name": "hungry-snake",
   "displayName": "Hungry Snake",
   "category": "game",
-  "description": "Classic snake arcade game",
-  "tech": ["Python", "Pygame"],
+  "description": "Classic snake game where players eat food and grow while avoiding collisions",
+  "tech": ["Java"],
   "github": "https://github.com/ken1009us/hungry-snake",
   "liveUrl": null,
   "order": 8

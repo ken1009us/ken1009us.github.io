@@ -2,8 +2,8 @@
   "name": "asteroid",
   "displayName": "Asteroids Game",
   "category": "game",
-  "description": "Classic asteroids arcade game",
-  "tech": ["Python", "Pygame"],
+  "description": "JavaFX arcade game where players pilot a spacecraft to destroy asteroids",
+  "tech": ["Java", "JavaFX", "Maven"],
   "github": "https://github.com/ken1009us/asteroid",
   "liveUrl": null,
   "order": 6

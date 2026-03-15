@@ -2,8 +2,8 @@
   "name": "mlb-rumors-analysis",
   "displayName": "MLB Rumors Analysis",
   "category": "proj",
-  "description": "MLB rumors analysis project",
-  "tech": ["Python"],
+  "description": "Data pipeline for scraping, analyzing, and visualizing MLB trade rumors with sentiment analysis",
+  "tech": ["Python", "Airflow", "AWS", "Tableau", "Pandas"],
   "github": "https://github.com/ken1009us/mlb-rumors-analysis",
   "liveUrl": null,
   "order": 2

@@ -1,10 +1,10 @@
 {
-  "name": "unit-conversion",
-  "displayName": "Units Conversion Service",
+  "name": "unit-conversion-service",
+  "displayName": "Unit Conversion Service",
   "category": "proj",
-  "description": "Units conversion service application",
-  "tech": ["Python"],
-  "github": "https://github.com/ken1009us/unit-conversion",
+  "description": "gRPC-based unit conversion service for converting between measurement units",
+  "tech": ["Go", "gRPC", "Protocol Buffers"],
+  "github": "https://github.com/ken1009us/unit-conversion-service",
   "liveUrl": null,
   "order": 5
 }

@@ -1,8 +1,8 @@
 {
   "name": "pycleancodecli",
-  "displayName": "Python Comment-out Code Cleaner CLI",
+  "displayName": "PyCleanCodeCLI",
   "category": "tool",
-  "description": "CLI tool to clean commented-out code from Python files",
+  "description": "CLI tool to clean comments and unnecessary whitespace from Python files",
   "tech": ["Python"],
   "github": "https://github.com/ken1009us/pycleancodecli",
   "liveUrl": null,

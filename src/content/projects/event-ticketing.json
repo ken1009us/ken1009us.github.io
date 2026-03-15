@@ -2,8 +2,8 @@
   "name": "event-ticketing-service",
   "displayName": "Event Ticketing Service",
   "category": "proj",
-  "description": "Event ticketing service application",
-  "tech": ["Python", "FastAPI"],
+  "description": "Event ticketing platform for browsing events, reserving tickets, and managing bookings",
+  "tech": ["Python", "FastAPI", "MySQL", "SQLAlchemy", "Docker"],
   "github": "https://github.com/ken1009us/event-ticketing-service",
   "liveUrl": null,
   "order": 0

@@ -2,7 +2,7 @@
   "name": "hotel-reservation-application",
   "displayName": "Hotel Reservation App",
   "category": "proj",
-  "description": "Hotel reservation application",
+  "description": "CLI-based hotel room reservation system with OOP design and Java Collections",
   "tech": ["Java"],
   "github": "https://github.com/ken1009us/hotel-reservation-application",
   "liveUrl": null,

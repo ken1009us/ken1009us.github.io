@@ -2,8 +2,8 @@
   "name": "vocabulary-practice-app",
   "displayName": "Vocabulary Practice App",
   "category": "tool",
-  "description": "Vocabulary practice application",
-  "tech": ["Python"],
+  "description": "JavaFX desktop app for learning vocabulary through word entry and interactive quizzes",
+  "tech": ["Java", "JavaFX"],
   "github": "https://github.com/ken1009us/vocabulary-practice-app",
   "liveUrl": null,
   "order": 7
