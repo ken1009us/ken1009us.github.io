@@ -132,6 +132,93 @@ Each recommendation is a separate JSON file.
 
 ---
 
+## Translations / i18n (`src/i18n/`)
+
+The site supports 3 languages: **English** (default), **日本語**, **繁體中文**. Users switch with the `lang` command.
+
+- Content JSON files (`src/content/`) stay **English only** (source of truth)
+- Translations live in `src/i18n/en.ts`, `ja.ts`, `zh-TW.ts`
+- Missing translations automatically fall back to English — nothing breaks
+
+### Adding translations for new Experience
+
+1. Create the JSON file in `src/content/experience/` as usual (English)
+2. Add a mapping in `src/components/terminal/commands/experience.tsx`:
+   ```ts
+   const COMPANY_KEYS: Record<string, string> = {
+     ...existing,
+     'New Company Name': 'new-company',  // company field → translation key
+   };
+   ```
+3. In `src/i18n/ja.ts` and `src/i18n/zh-TW.ts`, add to the `experience` section:
+   ```ts
+   categories: {
+     'New Category': '翻訳 / 翻譯',  // only if it's a new category name
+   },
+   bullets: {
+     'new-company': {
+       'Category Name': [
+         'Translated bullet 1',
+         'Translated bullet 2',
+       ],
+     },
+   },
+   ```
+
+### Adding translations for new Project
+
+1. Create the JSON file in `src/content/projects/` as usual (English)
+2. In `ja.ts` / `zh-TW.ts`, add to `projects.descriptions`:
+   ```ts
+   descriptions: {
+     'project-name': 'Translated description',  // key = the `name` field in JSON
+   },
+   ```
+
+### Adding translations for new Recommendation
+
+1. Create the JSON file in `src/content/recommendations/` as usual (English)
+2. Add a mapping in `src/components/terminal/commands/recommendations.tsx`:
+   ```ts
+   const AUTHOR_KEYS: Record<string, string> = {
+     ...existing,
+     'Author Display Name': 'author-key',
+   };
+   ```
+3. In `ja.ts` / `zh-TW.ts`, add to `recommendations.texts`:
+   ```ts
+   texts: {
+     'author-key': 'Translated recommendation text',
+   },
+   ```
+
+### Adding translations for new Skills category
+
+No mapping needed. In `ja.ts` / `zh-TW.ts`, add to `skills.categories`:
+```ts
+categories: {
+  'New Category Name': 'Translated name',  // key = exact category name from skills.json
+},
+```
+
+### Adding a new UI string
+
+1. Add the English string in `src/i18n/en.ts`
+2. Add the type in the `Translations` interface in `src/i18n/index.ts`
+3. Add translations in `ja.ts` / `zh-TW.ts`
+4. Use `t('key.path')` in the component
+
+### Adding a new language
+
+1. Create `src/i18n/xx.ts` (export type `TranslationsPartial`)
+2. In `src/i18n/index.ts`:
+   - Add to `Lang` type
+   - Add to `translations` record
+   - Add to `SUPPORTED_LANGS` array
+3. In each language file, add the display name to `lang.labels`
+
+---
+
 ## Deploy Workflow
 
 ```
