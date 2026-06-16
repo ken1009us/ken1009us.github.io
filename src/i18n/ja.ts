@@ -89,16 +89,22 @@ export const ja: TranslationsPartial = {
       'Other Contributions': 'その他の貢献',
       Engineering: 'エンジニアリング',
       'Frontend Engineering': 'フロントエンドエンジニアリング',
+      'Session Idle Timeout Implementation': 'Session Idle Timeout 実装',
+      'API Usage Development': 'API利用機能開発',
     },
     bullets: {
       'treasure-data': {
-        'Backend Engineering': [
+        'Session Idle Timeout Implementation': [
+          '400社以上の企業顧客が利用する2つのReactアプリ向けに自動セッションタイムアウトを構築し、React hooksとReduxによるカスタム実装でサードパーティライブラリを置き換え',
+          'SWRを使ったスマートポーリングシステムを構築し、タイムアウトが近づくほどセッション状態を高頻度で確認することで不要なサーバー呼び出しを削減',
+          'BroadcastChannel APIとTypeScriptでブラウザタブ間のセッション状態を同期し、予期しないログアウト問題を修正',
+          '複数のコードベースでAPI呼び出しを統一する共有npmパッケージを公開し、機能リリースのブロックを解消',
+        ],
+        'API Usage Development': [
           '有効期限が近づくAPIキーに対する自動メールリマインダーワークフローを構築し、顧客の予期しないAPI障害を防止',
           'MySQLデータベーススキーマの変更と、APIキーの有効期限およびリマインダーポリシーを設定可能にするバックエンドロジックを設計・実装',
-          '認証フローとRailsバックエンドエンドポイントを更新してAPIキーの有効期限とリマインダー機構の実装をリードし、APIキーの無期限使用を防止',
-        ],
-        'Frontend Engineering': [
           '有効期限設定と通知バナーを備えたAPIキー管理インターフェースをReactで開発し、APIキーの有効期限切れの可視性を向上',
+          '認証フローとRailsバックエンドエンドポイントを更新してAPIキーの有効期限とリマインダー機構の実装をリードし、APIキーの無期限使用を防止',
         ],
       },
       allstate: {

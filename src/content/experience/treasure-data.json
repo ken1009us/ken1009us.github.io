@@ -1,5 +1,5 @@
 {
-  "company": "Treasure Data",
+  "company": "Treasure Data / Treasure AI",
   "role": "Software Engineer",
   "startDate": "2026",
   "endDate": "Present",
@@ -7,13 +7,17 @@
   "type": "Hybrid",
   "order": 4,
   "categories": {
-    "Backend Engineering": [
+    "Session Idle Timeout Implementation": [
+      "Built auto session timeout for two React apps used by 400+ corporate clients, replacing a third-party library with a custom solution using React hooks and Redux",
+      "Built smart polling system with SWR that checks session status more frequently as timeout approaches, reducing unnecessary server calls",
+      "Synced session state across browser tabs using BroadcastChannel API and TypeScript, fixing unexpected logout issues",
+      "Published a shared npm package to unify API calls across multiple codebases, unblocking the feature release"
+    ],
+    "API Usage Development": [
       "Built automated email reminder workflows for expiring API keys, helping customers avoid unexpected API disruptions",
       "Designed and implemented MySQL database schema changes and backend logic for configurable API key expiration and reminder policies",
+      "Developed an API key management interface in React with configurable expiration settings and notification banners, improving visibility of upcoming API key expirations",
       "Led the implementation of API key expiration and reminder mechanisms by updating authentication flows and Rails backend endpoints, preventing indefinite API key usage"
-    ],
-    "Frontend Engineering": [
-      "Developed an API key management interface in React with configurable expiration settings and notification banners, improving visibility of upcoming API key expirations"
     ]
   }
 }

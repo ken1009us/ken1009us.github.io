@@ -89,16 +89,22 @@ export const zhTW: TranslationsPartial = {
       'Other Contributions': '其他貢獻',
       Engineering: '工程',
       'Frontend Engineering': '前端工程',
+      'Session Idle Timeout Implementation': 'Session Idle Timeout 實作',
+      'API Usage Development': 'API 使用量功能開發',
     },
     bullets: {
       'treasure-data': {
-        'Backend Engineering': [
+        'Session Idle Timeout Implementation': [
+          '為 400+ 企業客戶使用的兩個 React 應用程式建置自動 session timeout，以 React hooks 和 Redux 的自訂方案取代第三方套件',
+          '使用 SWR 建置智慧 polling 系統，越接近 timeout 越頻繁檢查 session 狀態，減少不必要的伺服器請求',
+          '使用 BroadcastChannel API 和 TypeScript 同步瀏覽器分頁間的 session 狀態，修復非預期登出問題',
+          '發布共享 npm package 統一多個 codebase 的 API 呼叫方式，解除功能發布阻礙',
+        ],
+        'API Usage Development': [
           '建立即將過期 API 金鑰的自動電子郵件提醒工作流程，協助客戶避免意外的 API 中斷',
           '設計並實作 MySQL 資料庫 schema 變更及後端邏輯，支援可配置的 API 金鑰過期與提醒策略',
-          '透過更新認證流程和 Rails 後端端點，主導 API 金鑰過期與提醒機制的實作，防止 API 金鑰無限期使用',
-        ],
-        'Frontend Engineering': [
           '以 React 開發 API 金鑰管理介面，具備可配置的過期設定和通知橫幅，提升 API 金鑰即將過期的可見性',
+          '透過更新認證流程和 Rails 後端端點，主導 API 金鑰過期與提醒機制的實作，防止 API 金鑰無限期使用',
         ],
       },
       allstate: {

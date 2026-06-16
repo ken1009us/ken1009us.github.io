@@ -89,6 +89,8 @@ export const en: Translations = {
       'Other Contributions': 'Other Contributions',
       Engineering: 'Engineering',
       'Frontend Engineering': 'Frontend Engineering',
+      'Session Idle Timeout Implementation': 'Session Idle Timeout Implementation',
+      'API Usage Development': 'API Usage Development',
     },
     bullets: {},
   },
