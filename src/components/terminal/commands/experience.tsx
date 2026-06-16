@@ -4,6 +4,7 @@ import { translateArray } from '../../../i18n';
 /** Map company name → key used in translation bullets */
 const COMPANY_KEYS: Record<string, string> = {
   'Treasure Data': 'treasure-data',
+  'Treasure Data / Treasure AI': 'treasure-data',
   'Allstate Insurance Company': 'allstate',
   'THECOO Inc.': 'thecoo',
   'PhysIQ': 'physiq',
